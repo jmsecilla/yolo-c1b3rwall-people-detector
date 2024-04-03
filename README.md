@@ -65,7 +65,7 @@ Este proyecto se ha llevado a cabo sobre un sistema operativo Ubuntu 22.04
 
 ### Prerequisites
 
-Se instalará Python 3.11 en el sistema operativo
+#### Instalación Python 3.11 en el sistema operativo
 
 1. Abre una terminal en tu sistema Ubuntu.
 2. Asegúrate de tener todas las actualizaciones más recientes instaladas en tu sistema Ubuntu. Puedes hacerlo ejecutando los siguientes comandos:
@@ -90,6 +90,60 @@ Se instalará Python 3.11 en el sistema operativo
     python3.11 --version
   ```
 
+#### Instalación CUDA 12.2 en Ubuntu 22.04
+
+1. Abre una terminal en tu sistema Ubuntu.
+2. Asegúrate de tener todas las actualizaciones más recientes instaladas en tu sistema Ubuntu. Puedes hacerlo ejecutando los siguientes comandos:
+  ```sh
+    sudo apt update
+    sudo apt upgrade
+  ```
+3. Listar los drivers recomendados de NVIDIA.
+  ```sh
+    sudo apt install ubuntu-drivers-common
+    sudo ubuntu-drivers devices
+  ```
+4. Instalar el driver recomendado en el apartado anterior, en nuestro caso nvidia-driver-535
+  ```sh
+    sudo apt install nvidia-driver-535
+  ```
+5. Reiniciar el sistema:
+  ```sh
+    sudo reboot now
+  ```
+6. Comprobar que el driver se ha instalado correctamente:
+  ```sh
+    nvidia-smi
+  ```
+
+#### Instalación de CUDA toolkit en Ubuntu 22.04
+1. Necesitaremos instalar el compilador gcc ya que se utilizará al instalar el kit de herramientas CUDA. Asegúrate de tener gcc instalado con el siguiente comando:
+  ```sh
+    sudo apt install gcc
+  ```
+2. Verificar la correcta instalación de GCC.
+  ```sh
+    gcc -v
+  ```
+4. Instalar CUDA toolkit
+  ```sh
+    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+    sudo dpkg -i cuda-keyring_1.1-1_all.deb
+    sudo apt-get update
+    sudo apt-get -y install cuda
+  ```
+5. Reiniciar el sistema:
+  ```sh
+    sudo reboot now
+  ```
+6. Configuración del entorno, añadir la siguientes líneas a bashrc mediante `nano ~ /.bashrc`:
+  ```sh
+  . ~/.bashrc
+  ```
+7. Comprobar que CUDA toolkit se ha instalado correctamente:
+  ```sh
+    nvcc -V
+  ```
 
 ### Uso del sistema de detección para entrenamiento y clasificación
 
