@@ -14,28 +14,6 @@
   </p>
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Contenidos del taller</summary>
-  <ol>
-    <li>
-      <a>Introducción</a>
-    </li>
-    <li>
-      <a>Machine learning</a>
-    </li>
-    <li><a>Datasets más conocidos</a></li>
-    <li><a>Herramientas de etiquetado: Roboflow</a></li>
-    <li><a>YOLO (You Only Look Once)</a></li>
-    <li><a>Experimentación</a></li>
-    <li><a>Conclusiones</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## Introducción
 
@@ -151,17 +129,22 @@ A continuación se muestran los comandos a ejecutar para usar el sistema de entr
 
 1. Clonar el repositorio
 ```sh
-  git clone https://github.com/your_username_/Project-Name.git
+  git clone https://github.com/jmsecilla/yolo-c1b3rwall-people-detector.git
 ```
-2. Install las dependencias de Python
+2. Instalar las dependencias de Python
 ```sh
   pip install requirements.txt
 ```
 3. A partir de aquí, se recomienda hacer uso de un IDE de desarrollo para trabajar, aunque no es obligatorio.
 
 #### Entrenamiento
-
+```sh
+  python train.py
+```
 #### Clasificación
+```sh
+  yolo detect predict imgsz=640 model=/home/jmcastillo/PycharmProjects/peopleDetector/src/runs/detect/train5/weights/best.pt source=/home/jmcastillo/Downloads/gun_chile.mp4 show=True
+```
 
 <!-- LICENSE -->
 ## License
