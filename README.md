@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -38,9 +39,10 @@ Contenidos del taller:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Este proyecto se ha llevado a cabo sobre un sistema operativo Ubuntu 22.04
+Este proyecto se ha llevado a cabo sobre un sistema operativo Ubuntu 22.04 junto con una tarjeta gráfica Nvidia RTX 2070. Antes de poder llevar a cabo un primer entrenamiento
+y clasificación, se deben instalar todas aquellas librerías necesarias para que el sistema funcione correctamente.
 
-### Prerequisites
+### Requisitos previos
 
 #### Instalación Python 3.11 en el sistema operativo
 
@@ -141,6 +143,9 @@ A continuación se muestran los comandos a ejecutar para usar el sistema de entr
   python train.py
 ```
 #### Clasificación
+Para llevar a cabo el proceso de clasificación se deberán modificar las ruta donde se ha generado el modelo y la ruta
+en la que se encuentra el vídeo o imagen a clasificar.
+
 ```sh
   yolo detect predict imgsz=640 model=/home/jmcastillo/PycharmProjects/peopleDetector/src/runs/detect/train5/weights/best.pt source=/home/jmcastillo/Downloads/gun_chile.mp4 show=True
 ```
@@ -157,9 +162,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Jose María Castillo Secilla - [@your_twitter](https://twitter.com/your_username) - jmsecilla@gmail.com
+Jose María Castillo Secilla - jmsecilla@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/jmsecilla/yolo-c1b3rwall-people-detector](https://github.com/jmsecilla/yolo-c1b3rwall-people-detector)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
