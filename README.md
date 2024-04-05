@@ -24,10 +24,13 @@ avalados por la legislación vigente, para que sean los participantes en el tall
 
 Contenidos del taller:
 * Introducción
+* Inteligencia Artificial
 * Machine Learning
+* Aprendizaje supervisado vs no supervisado
+* Concepto de red neuronal
 * Concepto de dataset
 * Datasets más conocidos
-* Herramientas de etiquetado: Roboflow
+* Creación de datasets
 * Yolo
 * Experimentación
 * Conclusiones
@@ -167,13 +170,3 @@ Jose María Castillo Secilla - jmsecilla@gmail.com
 Project Link: [https://github.com/jmsecilla/yolo-c1b3rwall-people-detector](https://github.com/jmsecilla/yolo-c1b3rwall-people-detector)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-<!-- ## Acknowledgments -->
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
